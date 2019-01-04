@@ -11,7 +11,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from config import *
 
-path = r"C:/Users/lake/Desktop/chromedriver.exe"
+
+import os
+desktop = os.path.expanduser("~/Desktop")
+
+path = desktop + r"/chromedriver.exe"
 website = 'https://uionline.detma.org/Claimant/Core/Login.ASPX'
 browser = webdriver.Chrome(path)
 browser.set_page_load_timeout(10)
